@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height: 50vh;
+        width: 100vw;
+    }
+
+    span{
+        color: red;
+    }
+</style>
+<body>
+
+    <!-- Bài 1 -->
+    <!-- <div>
+        <div class="mySlide">
+            <span style="text-align: center;">1/5</span>
+            <img src="./img/banner1.png" alt="">
+        </div>
+        <div class="mySlide">
+            <span style="text-align: center;">2/5</span>
+            <img src="./img/banner2.png" alt="">
+        </div>
+        <div class="mySlide">
+            <span style="text-align: center;">3/5</span>
+            <img src="./img/banner3.png" alt="">
+        </div>
+        <div class="mySlide">
+            <span style="text-align: center;">4/5</span>
+            <img src="./img/banner4.png" alt="">
+        </div>
+        <div class="mySlide">
+            <span style="text-align: center;">5/5</span>
+            <img src="./img/banner5.jpg" alt="">
+        </div>
+    </div>
+    <div>
+        <button onclick="nextSlide(-1)">Anh truoc</button>
+        <button onclick="nextSlide(1)">Anh sau</button>
+        <button onclick="autoSlide()">Tu dong chay</button>
+        <button onclick="stopSlide()">Dung lai</button>
+    </div> -->
+
+
+
+    <!-- Bài 2 -->
+    <!-- <div>
+        <table border="1">
+            <thead>
+                <th>Tên</th>
+                <th>Nội dung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tài khoản</td>
+                    <td>
+                        <input type="text" id="taiKhoan">
+                        <span class="thongbao"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu</td>
+                    <td>
+                        <input type="text" id="matKhau">
+                        <span class="thongbao"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="dangNhap()">Đăng nhập</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+
+    <!-- Bài 3 -->
+    <table border="1">
+        <thead>
+            <th>Tên</th>
+            <th>Nội dung</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Họ tên</td>
+                <td>
+                    <input type="text" id="hoTen">
+                    <span class="thongbao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Năm sinh</td>
+                <td>
+                    <input type="text" id="namSinh">
+                    <span class="thongbao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Loại đăng ký</td>
+                <td>
+                    <select name="" id="loaiDangKy" onchange="chonLoai()">
+                        <option value="">Vui lòng chọn loại thành viên</option>
+                        <option value="1">Thành viên thường</option>
+                        <option value="2">Thành viên vip</option>
+                    </select>
+                    <span class="thongbao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Giá tiền</td>
+                <td>
+                    <input type="text" id="giaTien" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>Số tháng đăng ký</td>
+                <td>
+                    <input type="text" id="soThangDangKy">
+                    <span class="thongbao"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Tổng tiền</td>
+                <td>
+                    <input type="text" id="tongTien" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="dangKy()">Đăng Ký</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script src="thithu.js"></script>
+</html>

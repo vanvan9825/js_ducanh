@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <th>Tên</th>
+            <th>Nội dung</th>
+            <th>Kết quả</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Họ tên</td>
+                <td>
+                    <input type="text" id="hoTen"><br>
+                    <span style="color: red;" class="thongbao"></span>
+                </td>
+                <td id="render_hoTen"></td>
+            </tr>
+            <tr>
+                <td>Quê quán</td>
+                <td>
+                    <input type="text" id="queQuan"><br>
+                    <span style="color: red;"  class="thongbao"></span>
+                </td>
+                <td id="render_queQuan"></td>
+            </tr>
+            <tr>
+                <td>Tuổi</td>
+                <td>
+                    <input type="text" id="namSinh"><br>
+                    <span style="color: red;"  class="thongbao"></span>
+                </td>
+                <td id="render_namSinh"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button onclick="themSV()">Thêm sinh viên</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+    <h1>Danh sách sinh viên</h1>
+    <table border="1">
+        <thead>
+            <th>Họ tên</th>
+            <th>Quê quán</th>
+            <th>Tuổi</th>
+        </thead>
+        <tbody>
+            <!-- render dữ liệu bảng vào đây  -->
+        </tbody>
+    </table>
+</body>
+<script src="/buoi6_2.js"></script>
+
+</html>

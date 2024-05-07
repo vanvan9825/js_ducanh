@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- html bao bọc toàn bộ -->
+
+    <!-- thẻ head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .testclass{
+            color: red;
+        }
+    </style>
+</head>
+
+
+<!-- thẻ body  -->
+<body>
+  <h1 class="testclass">dây là lớp xưởng của mình </h1>
+  <h1 id="test">dây là lớp xưởng của mình nhe </h1>
+
+  <h1 class="testclass">dây là lớp xưởng của mình nhe nhe </h1>
+  <h2>xin chao cac cau</h2>
+  <h2 class="testclass">minh la hoc sinh gioi</h2>
+
+
+  <a href="#">aaaaa</a>
+
+  <div>
+    heloo <span>cac anh em</span>
+    <!-- <script>
+        alert("cac ban than yeu ");
+    </script> -->
+  </div>
+
+
+
+
+
+
+
+
+    <script src="buoi4.js"></script>
+</body>
+</html>
+
+<script>
+    console.log("xin chao cac ban");
+    // DOM là phần cốt lỡi của html js css 
+    // cho phép các ngôn ngữ này tương tác với nhau 
+    
+
+    // phương thức sử dụng trong dom 
+    //  document.getElementByTagName(): tương tác với các tag name trong html
+       let tagname = document.getElementsByTagName('h1');
+       console.log(tagname);
+       console.log("đây là nội dung của thẻ thứ nhất:  " , tagname[0].innerText);
+       console.log("đây là nội dung của thẻ thứ hai:  " , tagname[1].innerText);
+       console.log("đây là nội dung của thẻ thứ ba:  " , tagname[2].innerText);
+
+
+       let tagname2 = document.getElementsByTagName('h2');
+       console.log(tagname2[1].innerHTML);
+
+       // thay đổi nọi dung của thẻ 
+      //tagname[0].innerHTML = " hom nay toi vui";
+    //   for (let index = 0; index < tagname.length; index++){
+    //     tagname[index].innerHTML = "hom nay toi buon ngu"
+    //   }
+
+
+      let tagname3 = document.getElementsByTagName('a')
+      tagname3[0].innerHTML = "nut sua"
+
+
+      let tagname4 = document.getElementsByTagName('div');
+      console.log(tagname4);
+      console.log("day laf innerText" ,tagname4[0].innerText );
+      console.log(tagname4[0].innerHTML );
+      let input = "<script>alert('cac ban than yeu'); <script> ";
+      tagname4[0].innText = input
+
+
+
+    //  document.getElementByClassName(): tương tác với các class name trong html
+      let classname = document.getElementsByClassName("testclass");
+      console.log(classname);
+      console.log(classname[0].innerHTML);
+      classname[1].innerHTML = " toi bi yeu nhieu ban";
+      classname[2].innText = " toi yeu 10 anh"; 
+
+
+
+
+
+    //  document.getElementById(): tương tác với các id name trong html vaf nó chỉ có 1
+    let xinchao = document.getElementById('test')
+    console.log(xinchao);
+    xinchao.innerHTML = "<<button>xin chao </button>>"
+    
+    // querySelector: dùng đẻ tìm phần tử đầu tiên mà nó thấy và thao tác nó trong HTML
+
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // var|let|const 
+
+    // // Điểm giống nhau - đều dùng để khai báo biến 
+    var hoTen = "Nguyễn Đức Anh"
+    let tuoi = 18
+    const queQuan = "Nam Định"
+    console.log(hoTen);
+    console.log(tuoi);
+    console.log(queQuan);
+
+    // // Khác nhau 
+    // // // - var, let đều có thể gán lại được giá trị/ const thì không gán lại được giá trị
+    // var a = "Nguyễn Ngọc Anh"
+    // a = "Nguyễn Ngọc Linh"
+    // console.log(a); // Nhận giá trị gán
+
+    // let b = "Nguyễn Ngọc Mai"
+    // b = "Nguyễn Ngọc Bích"
+    // console.log(b); // Nhận giá trị gán
+
+    // const c = "Trần Văn Mạnh"
+    // c = "Nguyễn Văn Minh"
+    // console.log(c); // Lỗi, không gán lại được
+
+
+    // // - Var thì khai báo lại được, let và const thì không khai báo lại được 
+    // var d = 2000
+    // var d = 500
+    // console.log(d);
+    
+
+    // // - var, let thì không cần giá trị khởi tạo 
+    // var trangThai
+    // console.log(trangThai);
+    // let sucKhoe
+    // console.log(sucKhoe);
+    // // const lopHoc // Lỗi
+    // // console.log(lopHoc);
+
+    // // var có thể truy cập bên ngoài scope/ truy cập từ bất kỳ đâu
+    // if (true) {
+    //     var nY = "Trần Văn Mạnh"
+    // }
+    // console.log(nY);
+
+    // // let, const không thể truy cập bên ngoài scope 
+    // if (true) {
+    //     let anhTrai = "Nguyễn Ngọc Long"
+    // }
+    // console.log(anhTrai);
+
+    // if (true) {
+    //     const emTrai = "Nguyễn Ngọc An"
+    // }
+    // console.log(emTrai);
+
+    // => var là biến toàn cục 
+
+    // => let và const là biến cục bộ 
+
+    // Ví dụ: Nhập vào tên, năm sinh, giới tính (nam = 0, nữ = 1)
+    // Kiểm tra xem người đó có đủ tuổi đi NVQS hay không
+    // Hiển thị ra thông báo (alert) ông/bà có đủ tuổi đi NVQS 
+    // (ông/bà hiển thị theo gtri nhập vào)
+    // tuổi sẽ lấy năm hiện tại - năm sinh 
+    // => 18 và <= 27 tuổi 
+
+    // let hoTen = prompt("Nhập vào tên")
+    // let namSinh = prompt("Nhập vào năm sinh")
+    // let gioiTinh = prompt("Nhập vào giới tính")
+    // let namNay = new Date().getFullYear();
+    // let tuoi = namNay - namSinh
+    // if (gioiTinh == 0 && tuoi >= 18 && tuoi <= 27) {
+    //     alert(`ông ${hoTen} đã đủ tuổi lên đường`);
+    //     console.log("ông", hoTen, "đã đủ tuổi lên đường");
+    // }else if(gioiTinh == 1 && tuoi >= 18 && tuoi <= 27){
+    //     alert(`Bà ${hoTen} đã đủ tuổi lên đường`);
+    // }else if(gioiTinh == 0 && tuoi < 18 || tuoi > 27){
+    //     alert(`ông ${hoTen} không được đi NVQS`);
+    // }else{
+    //     alert(`Bà ${hoTen} không được đi NVQS`);
+    // }
+
+    // // Toán tử ba ngôi 
+    // let checkgioiTinh = gioiTinh == 0 ? 'Ông' : 'bà'
+    // let checkTuoi = tuoi >= 18 && tuoi <= 27 ? 'đã đủ tuổi lên đường' : 'không được đi NVQS'
+    // alert(`${checkgioiTinh} ${hoTen} ${checkTuoi}`)
+    
+</script>
+</html>

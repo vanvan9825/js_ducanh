@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <form name="myform" action="#" onsubmit="return kiemtra()">
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td><input type="text" name="name">
+                        <span id="ht"></span></td>
+                </tr>
+                <tr>
+                    <td>SDT: </td>
+                    <td><input type="text" name="sdt">
+                        <span id="sdt1"></span></td>
+                </tr>
+                <tr>
+                    <td>CCCD: </td>
+                    <td><input type="text" name="cccd">
+                        <span id="cccd1"></span></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="text" name="email">
+                        <span id="email"></span></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="password">
+                        <span id="pass"></span></td>
+                </tr>
+                <tr>
+                    <td>Confirmpassword: </td>
+                    <td><input type="password" name="repassword"><span id="repass"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="ĐĂNG KÝ"></td>
+                </tr>
+            </table>
+    
+        </form>
+        <script>
+            function kiemtra() {
+                var name = document.myform.name.value;
+                var password = document.myform.password.value;
+                var repassword = document.myform.repassword.value;
+                var status = false;
+                //Kiểm tra Name
+                if (name.length < 1) {
+                    document.getElementById('ht').innerHTML = " Bạn bhập đầy đủ họ tên.";
+                    status = false;
+                } else if (!isNaN(name)) {
+                    document.getElementById('ht').innerHTML = " Bạn nhập đầy đủ họ tên.";
+                    status = false;
+                } else {
+                    document.getElementById('ht').innerHTML = "hoàn thành ";
+                    status = true;
+                }
+                //Kiểm tra Email
+                var mail = document.myform.email.value;
+                var remail = new RegExp("\\w+@\\w+(\\.\\w+){1,2}", "g");
+                if (!mail.match(remail)) {
+                    document.getElementById('email').innerHTML = " Bạn phải nhập đầy đủ Email.";
+                    status = false;
+                } else {
+                    document.getElementById('email').innerHTML = "hoàn thành ";
+                    status = true;
+                }
+                //Kiểm tra password
+                    if(password.length < 8){
+                        document.getElementById('pass').innerHTML=" Cần tối thiểu 8 kí tự"
+                        status = false;
+                    } else {
+                        document.getElementById('pass').innerHTML=" pass ok"
+                        status = true;
+                    }
+                //Kiểm tra repassword
+                    if (password != repassword || repassword.length < 8){
+                        document.getElementById('repass').innerHTML = " Bạn nhập Repassword phải giống Password.";
+                        status = false;
+                    } else {
+                        document.getElementById('repass').innerHTML = "pass ok";
+                        status = true;
+                    }
+                    //Kiểm tra so dien thoai
+                var dt = document.myform.sdt.value;
+                var dt1 = new RegExp(/((09|03|07|08|05)+([0-9]{8})\b)/g);
+                    if (!dt.match(dt1)) {
+                        document.getElementById('sdt1').innerHTML = " Bạn phải nhập đầy đủ sdt.";
+                        status = false;
+                    } else {
+                        document.getElementById('sdt1').innerHTML = "hoàn thành ";
+                        status = true;
+                    }
+                    //Kiểm tra CCCD
+                var cm = document.myform.cccd.value;
+                var cmt = new RegExp("\\d{11}", "g");
+                    if (!cm.match(cmt)) {
+                        document.getElementById('cccd1').innerHTML = "  Bạn phải nhập số cccd";
+                        status = false;
+                    } else {
+                        document.getElementById('cccd1').innerHTML = " hoàn thành ";
+                        status = true;
+                    }
+            return status;
+        }
+    </script>
+</body>
+</html>

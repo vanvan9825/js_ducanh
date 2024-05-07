@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div">
+    <img width="500px" height="500px" src="meme.jpg" alt="" id="anh" >
+    <div class="prev">
+        <button onclick="prev()">prev</button>
+    </div>
+    <div class="next">
+        <button onclick="next()">next</button>
+    </div>
+    </div>
+    <br>
+     <div class="first">
+        <button class="anh" onclick="first()">first</button>
+    <button class="anh"  onclick="last()">last</button>
+     </div>
+    <script>
+        var img=[];
+        for (let i = 0; i < 6; i++){
+            img[i] = new Image;
+            img[i].src = "img/" +  i + ".jpg";
+            
+        var index = 0; 
+        function first(){
+            index = 0; 
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+        }
+          }
+        function last(){
+            index = 5; 
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+          
+        }
+        function prev(){
+            index --; 
+            if(index < 0){
+                index = img.length - 1
+            }
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+        }
+
+        function next(){
+            index ++; 
+            if(index == img.length){
+                index =0
+            }
+            var anh = document.getElementById('anh');
+            anh.src = img[index].src;
+        }
+        
+
+    </script>
+
+</body>
+</html>
